@@ -6,13 +6,13 @@ import redAlbedo from "./red-bricks/albedo.png"
 import redNormal from "./red-bricks/normal.png"
 import redRoughness from "./red-bricks/roughness.png"
 
-export type TextureDefinition = {
+export type TexturePack = {
   id: string
   label: string
   textures: Record<string, string>
 }
 
-export const textureDefinitions: TextureDefinition[] = [
+export const texturePacks: TexturePack[] = [
   {
     id: "mossy-bricks",
     label: "Mossy Bricks",

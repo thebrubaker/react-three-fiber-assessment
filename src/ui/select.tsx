@@ -9,6 +9,11 @@ import * as SelectPrimitive from "@radix-ui/react-select"
 
 import { cn } from "../lib/utils"
 
+/**
+ * Select component from Radix UI.
+ * https://ui.shadcn.com/docs/components/select
+ */
+
 const Select = SelectPrimitive.Root
 
 const SelectGroup = SelectPrimitive.Group

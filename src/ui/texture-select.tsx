@@ -6,20 +6,20 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./select"
-import { TextureDefinition, textureDefinitions } from "@/textures/definitions"
+import { TexturePack, texturePacks } from "@/textures/texture-packs"
 
 export function TextureSelect({
   value,
   onValueChange,
 }: {
-  value: TextureDefinition | undefined
-  onValueChange: (value: TextureDefinition | undefined) => void
+  value?: TexturePack
+  onValueChange?: (value?: TexturePack) => void
 }) {
   return (
     <Select
       value={value?.id}
       onValueChange={id => {
-        onValueChange(textureDefinitions.find(t => t.id === id))
+        onValueChange?.(texturePacks.find(t => t.id === id))
       }}
     >
       <SelectTrigger className="w-[180px] bg-slate-100">
@@ -27,7 +27,7 @@ export function TextureSelect({
       </SelectTrigger>
       <SelectContent>
         <SelectGroup>
-          {textureDefinitions.map(texture => (
+          {texturePacks.map(texture => (
             <SelectItem key={texture.id} value={texture.id}>
               {texture.label}
             </SelectItem>
